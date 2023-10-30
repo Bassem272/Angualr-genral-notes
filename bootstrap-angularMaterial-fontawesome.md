@@ -160,4 +160,60 @@ Here are some benefits of using Angular Font Awesome over the standard Font Awes
 
 6. **Support for Angular Features:** Angular Font Awesome is designed to work smoothly with Angular's change detection, rendering, and other features.
 
+
+The error messages you're seeing are related to missing or improperly configured dependencies in your project. Let's address each of these issues one by one:
+
+1. **Error: Can't resolve 'node_modules/@fortawesome/fontawesome-free/css/all.min.css'**
+
+   This error typically occurs when your project is unable to find the specified CSS file for Font Awesome. To resolve this issue, make sure you have Font Awesome installed and that the file path is correctly specified.
+
+   First, ensure that you have the `@fortawesome/fontawesome-free` package installed by running the following command:
+
+   ```bash
+   npm install --save @fortawesome/fontawesome-free
+   ```
+
+   Once you have Font Awesome installed, check the path where the CSS file is located. It should be similar to this:
+
+   ```
+   node_modules/@fortawesome/fontawesome-free/css/all.min.css
+   ```
+
+   Verify that this path is correct and that the file exists in your project's `node_modules` directory.
+
+   Additionally, ensure that you are correctly importing the Font Awesome CSS in your project. You should include it in your project's styles or a component's styles file. For example, in your `styles.css`:
+
+   ```css
+   /* styles.css */
+   @import '~@fortawesome/fontawesome-free/css/all.min.css';
+   ```
+
+2. **Error: Can't resolve 'node_modules/jquery/dist/jquery.min.js'**
+
+   This error indicates that your project is unable to locate the specified jQuery JavaScript file. To resolve this issue, make sure you have jQuery installed and that the file path is correctly specified.
+
+   First, ensure that you have the `jquery` package installed by running the following command:
+
+   ```bash
+   npm install --save jquery
+   ```
+
+   Once you have jQuery installed, check the path where the JavaScript file is located. It should be similar to this:
+
+   ```
+   node_modules/jquery/dist/jquery.min.js
+   ```
+
+   Verify that this path is correct and that the file exists in your project's `node_modules` directory.
+
+   Additionally, ensure that you are correctly importing jQuery in your project. You should include it in your application, typically by importing it in your TypeScript code or including it in your HTML files. For example, in your component file:
+
+   ```typescript
+   import * as $ from 'jquery';
+   ```
+
+   Then, you can use jQuery in your component code.
+
+   Remember to save your changes and restart your development server after making these adjustments to ensure they take effect.
+
 While you can still use the standard Font Awesome library in an Angular project by including the necessary CSS or JavaScript files, many Angular developers prefer the convenience and alignment with Angular best practices provided by the Angular Font Awesome package. It's a matter of preference and the specific requirements of your project.
