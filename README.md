@@ -1,1 +1,1 @@
-# Angualr-genral-notes
+# Angular-genral-notes
