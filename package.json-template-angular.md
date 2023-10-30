@@ -1,3 +1,4 @@
+```json
 {
   "name": "art-gallery",
   "version": "0.0.0",
@@ -45,6 +46,7 @@
     "typescript": "~5.1.3"
   }
 }
+```
 UPDATE src/app/admin/admin.module.ts (638 bytes)
 PS F:\ArtGallery> npm install bootstrap
 
